@@ -80,6 +80,22 @@ export const InputText = styled.input.attrs({ type: "text" })`
   }
 `;
 
+export const Password = styled.input.attrs({ type: "password" })`
+  width: 400px;
+  border: 2px solid rgba(4, 7, 47, 0.4);
+  border-radius: 8px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  @media (max-width: 540px) {
+    width: calc(400px * 4 / 5);
+  }
+  @media (max-width: 440px)
+  {
+    width: calc(400px *64/125)
+  }
+`;
+
 export const Article = styled.article`
   display: flex;
   justify-content: center;
@@ -99,6 +115,7 @@ export const Img = styled.img`
 `;
 
 export const Form = styled.form`
+  ${'' /* position: relative; */}
   display: flex;
   flex-direction: column;
   @media (max-width: 440px)
@@ -113,6 +130,7 @@ export const Label = styled("label").attrs({ className: "names" })`
 
 export const DivMargin = styled("div").attrs({ className: "sametype" })`
   margin: 15px 0px 0 0px;
+  position: relative;
 `;
 export const Confirmation = styled("div").attrs({ className: "confirmation" })`
   display: flex;
@@ -123,3 +141,10 @@ export const Confirmation = styled("div").attrs({ className: "confirmation" })`
     flex-direction: column-reverse
   }
 `;
+
+export const Eye = styled.i.attrs({className:"fa-solid fa-eye-slash"})`
+  position: absolute;
+  font-size: 20px;
+  right: 20px;
+  top: 35px;
+`

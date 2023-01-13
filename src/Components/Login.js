@@ -8,6 +8,8 @@ import {
   Label,
   DivMargin,
   Confirmation,
+  Password,
+  Eye
 } from "../Styles/Styles";
 
 
@@ -33,12 +35,13 @@ const Login = () => {
             Password
           </Label>
           <br />
-          <InputText
-            type="text"
+          <Password
+            type="password"
             id="password"
             name="password"
             placeholder="Enter Password"
           />
+          <Eye class="fa-solid fa-eye-slash"></Eye>
         </DivMargin>
         <Confirmation className="confirmation">
           <div className="rules">
